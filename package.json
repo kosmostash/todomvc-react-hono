@@ -1,0 +1,42 @@
+{
+  "type": "module",
+  "kosmo": {
+    "devHost": "127.0.0.1:4556",
+    "previewHost": "127.0.0.1:4558",
+    "distDir": "dist"
+  },
+  "scripts": {
+    "dev": "kosmo serve",
+    "preview": "kosmo preview",
+    "build": "kosmo build",
+    "typecheck": "kosmo typecheck",
+    "folder": "kosmo folder",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.11",
+    "@kosmojs/core": "^0.7.5",
+    "hono": "^4.13.22",
+    "react": "^19.3.1",
+    "react-router": "^8.5.3",
+    "tinyglobby": "^0.2.17",
+    "todomvc-app-css": "^2.4.3",
+    "todomvc-common": "^1.0.5",
+    "typebox": "^1.4.7"
+  },
+  "devDependencies": {
+    "@kosmojs/cli": "^0.7.5",
+    "@kosmojs/dev": "^0.7.5",
+    "@kosmojs/vitest": "^0.7.5",
+    "@types/bun": "^1.4.5",
+    "@types/deno": "^2.7.0",
+    "@types/node": "^26.6.10",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "playwright": "1.65.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.2"
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "hash": 25729847,
+  "params": {
+    "id": "ParamsT936095216",
+    "schema": [
+      {
+        "type": "param",
+        "kind": "required",
+        "name": "id",
+        "const": "id"
+      }
+    ],
+    "resolvedType": {
+      "name": "ParamsT936095216",
+      "jsonSchema": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "properties": [
+        {
+          "name": "id",
+          "optional": false,
+          "jsonSchema": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      ],
+      "numericProperties": [],
+      "booleanProperties": []
+    }
+  },
+  "methods": [
+    "GET",
+    "PATCH",
+    "DELETE"
+  ],
+  "typeDeclarations": [
+    {
+      "importDeclaration": {
+        "name": "Todo",
+        "path": "#/src/app/lib/db"
+      },
+      "text": "import type { Todo } from \"#/src/app/lib/db\";"
+    },
+    {
+      "importDeclaration": {
+        "name": "TodoId",
+        "path": "#/src/app/api/todos/types"
+      },
+      "text": "import type { TodoId } from \"#/src/app/api/todos/types\";"
+    },
+    {
+      "importDeclaration": {
+        "name": "UpdateTodo",
+        "path": "#/src/app/api/todos/types"
+      },
+      "text": "import type { UpdateTodo } from \"#/src/app/api/todos/types\";"
+    }
+  ],
+  "validationDefinitions": [
+    {
+      "method": "GET",
+      "target": "response",
+      "variants": [
+        {
+          "id": "ResponseTGET257055835",
+          "status": 200,
+          "contentType": "json",
+          "body": "Todo",
+          "resolvedType": {
+            "name": "ResponseTGET257055835",
+            "jsonSchema": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "completed"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "completed": {
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            },
+            "properties": [
+              {
+                "name": "id",
+                "optional": false,
+                "jsonSchema": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "title",
+                "optional": false,
+                "jsonSchema": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "completed",
+                "optional": false,
+                "jsonSchema": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "numericProperties": [],
+            "booleanProperties": [
+              "completed"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "target": "json",
+      "schema": {
+        "id": "JsonTPATCH2707495499",
+        "text": "UpdateTodo",
+        "resolvedType": {
+          "name": "JsonTPATCH2707495499",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "pattern": "\\S",
+                "maxLength": 1024
+              },
+              "completed": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "properties": [
+            {
+              "name": "title",
+              "optional": true,
+              "jsonSchema": {
+                "type": "string",
+                "pattern": "\\S",
+                "maxLength": 1024
+              }
+            },
+            {
+              "name": "completed",
+              "optional": true,
+              "jsonSchema": {
+                "type": "boolean"
+              }
+            }
+          ],
+          "numericProperties": [],
+          "booleanProperties": [
+            "completed"
+          ]
+        }
+      }
+    },
+    {
+      "method": "PATCH",
+      "target": "response",
+      "variants": [
+        {
+          "id": "ResponseTPATCH257055835",
+          "status": 200,
+          "contentType": "json",
+          "body": "Todo",
+          "resolvedType": {
+            "name": "ResponseTPATCH257055835",
+            "jsonSchema": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "completed"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "completed": {
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            },
+            "properties": [
+              {
+                "name": "id",
+                "optional": false,
+                "jsonSchema": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "title",
+                "optional": false,
+                "jsonSchema": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "completed",
+                "optional": false,
+                "jsonSchema": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "numericProperties": [],
+            "booleanProperties": [
+              "completed"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "referencedFiles": {
+    "src/app/api/todos/types.ts": 1906861117,
+    "src/app/lib/db.ts": 2851146380
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "./var/lib/tsconfig.json",
+  "exclude": [
+    ".//dev/null/",
+    "./src/",
+    "./var/",
+    "./public/"
+  ]
+}

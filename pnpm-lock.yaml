@@ -12,16 +12,16 @@ importers:
         specifier: ^2.1.11
         version: 2.1.11(hono@4.13.22)
       '@kosmojs/core':
-        specifier: ^0.7.4
-        version: 0.7.4
+        specifier: ^0.7.5
+        version: 0.7.5
       hono:
-        specifier: ^4.13.21
+        specifier: ^4.13.22
         version: 4.13.22
       react:
         specifier: ^19.3.1
         version: 19.3.1
       react-router:
-        specifier: ^8.5.2
+        specifier: ^8.5.3
         version: 8.5.3(@types/react-dom@19.3.0(@types/react@19.3.3))(@types/react@19.3.3)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       tinyglobby:
         specifier: ^0.2.17
@@ -37,14 +37,14 @@ importers:
         version: 1.4.7
     devDependencies:
       '@kosmojs/cli':
-        specifier: ^0.7.4
-        version: 0.7.4(@types/node@26.6.10)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))
+        specifier: ^0.7.5
+        version: 0.7.5(@types/node@26.6.10)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))
       '@kosmojs/dev':
-        specifier: ^0.7.4
-        version: 0.7.4(@types/node@26.6.10)(jiti@2.7.0)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))
+        specifier: ^0.7.5
+        version: 0.7.5(@types/node@26.6.10)(jiti@2.7.0)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))
       '@kosmojs/vitest':
-        specifier: ^0.7.4
-        version: 0.7.4(svelte@5.59.1)
+        specifier: ^0.7.5
+        version: 0.7.5(svelte@5.59.1)
       '@types/bun':
         specifier: ^1.4.5
         version: 1.4.5
@@ -52,17 +52,17 @@ importers:
         specifier: ^2.7.0
         version: 2.7.0
       '@types/node':
-        specifier: ^26.6.6
+        specifier: ^26.6.10
         version: 26.6.10
       '@types/react':
-        specifier: ^19.3.0
+        specifier: ^19.3.3
         version: 19.3.3
       '@types/react-dom':
         specifier: ^19.3.0
         version: 19.3.0(@types/react@19.3.3)
       playwright:
-        specifier: 1.63.0
-        version: 1.63.0
+        specifier: 1.65.1
+        version: 1.65.1
       react-dom:
         specifier: ^19.3.1
         version: 19.3.1(react@19.3.1)
@@ -210,21 +210,21 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@kosmojs/cli@0.7.4':
-    resolution: {integrity: sha512-Xs/RYvNE9SP3acuP+nk4ce0NSqIC8n3wS1daYRJRw2cXyDPDCjKPHAGBAdFqZNeqgBajVny1juESF3eOnVpZoQ==}
+  '@kosmojs/cli@0.7.5':
+    resolution: {integrity: sha512-gnUAhMzuloXl/RgtAtBN1b70f7+Fm61pwIJONkjqRxPfIFItomL3vylKD6pTSb0V6AIScMchLEz4xDiK14LGtA==}
     hasBin: true
 
-  '@kosmojs/core@0.7.4':
-    resolution: {integrity: sha512-sZDMm2Jg47Pzn/oojL8L8nhCadv0Rgsjev3fXfquVXr//Xt8nW8c7HEUuadxnTzZmBdB/1NttZKlMKoBT6iMYQ==}
+  '@kosmojs/core@0.7.5':
+    resolution: {integrity: sha512-Q56n4yAfTlLYsyI+kcYbAoDo+gf1LOCKCqC/dXAeTkAf002J3aY/24yMYehKmiqCJWHbedzYJDUIziqcUVFbcQ==}
 
-  '@kosmojs/dev@0.7.4':
-    resolution: {integrity: sha512-l4AcS9GtxNQaCAVu0sstgE+jPDknr/3miGo4Am/s2xHhlIWasRodZL7HZ9xyhJNnZYkQ7zZMWNqigRT11V5dzg==}
+  '@kosmojs/dev@0.7.5':
+    resolution: {integrity: sha512-gOlNaax7WyKIedzxL5lgM+D3kHkoS0++8BxXKrz1SrNPtVqNwi8/y7ofdTCBMWZayu3mG1dPSL0G7O+eeegZ0Q==}
 
-  '@kosmojs/lib@0.7.4':
-    resolution: {integrity: sha512-vhzTbpAYspT2VMxuFiINfA+CR0/u0wVfTK0yz9dJZWYvxiuRIg9g++jPTn3Gz1C5EThk/WH856kCg7PIRJrsIw==}
+  '@kosmojs/lib@0.7.5':
+    resolution: {integrity: sha512-GFmQUyfCl5UIXAbHosafXjXiDKGLLbsL09R/rWGVMamYJ6oTpqyqqOF99nLZRbPNk598qdn2ONRBWNlPyadVww==}
 
-  '@kosmojs/vitest@0.7.4':
-    resolution: {integrity: sha512-zJ/uyc4Z7ZKROYpgFm7rM2BOems+SYze6xcSZNQyezo0O2QBYjSrlvGavqBY4ZHPqwIxauUb1wdMd9YvWcCnqA==}
+  '@kosmojs/vitest@0.7.5':
+    resolution: {integrity: sha512-KWL6tRycjBvjzlxbGybFrtV2ND1z96nmUBfmYjeao1Mkhns+gWDy9lXUlN4C/Jui/EX0ASUiOBpYf+Yt1O+ufQ==}
 
   '@mdx-js/mdx@3.1.1':
     resolution: {integrity: sha512-f6ZO2ifpwAQIpzGWaBQT2TXxPv6z3RBzQKpVftEWN78Vl/YweF1uwussDx8ECAXVtr3Rs89fKyG9YlzUs9DyGQ==}
@@ -1679,13 +1679,13 @@ packages:
   picoquery@2.5.0:
     resolution: {integrity: sha512-j1kgOFxtaCyoFCkpoYG2Oj3OdGakadO7HZ7o5CqyRazlmBekKhbDoUnNnXASE07xSY4nDImWZkrZv7toSxMi/g==}
 
-  playwright-core@1.63.0:
-    resolution: {integrity: sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg==}
+  playwright-core@1.65.1:
+    resolution: {integrity: sha512-hqPpz7blSMPxWVdoeE1yiBSzXsKiVOd2k+kjCvmUywD2GPO2Dd9HfcWnq9NN0GHbNZDFgZ9JfBFr+X5/BLo0qw==}
     engines: {node: '>=20'}
     hasBin: true
 
-  playwright@1.63.0:
-    resolution: {integrity: sha512-+7ziBLidS4NaNCdt57SUDT+wYmmd5fmiQejUic/kb+YsYSCPyOOE9sebzMjNmQrsnNpDJqd4WHvV/8lfKfUDUg==}
+  playwright@1.65.1:
+    resolution: {integrity: sha512-vJ1FuoOrNwOKHUIVEvSt3jT1L+wjjDpwhwIstKtfvTh8XIG4FG4bIFuvNdMxi81LGfAhUgUZleVFaOLY4RIUUw==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -2242,12 +2242,12 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.3
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@kosmojs/cli@0.7.4(@types/node@26.6.10)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))':
+  '@kosmojs/cli@0.7.5(@types/node@26.6.10)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))':
     dependencies:
       '@clack/prompts': 1.9.0
-      '@kosmojs/core': 0.7.4
-      '@kosmojs/dev': 0.7.4(@types/node@26.6.10)(jiti@2.7.0)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))
-      '@kosmojs/lib': 0.7.4(svelte@5.59.1)
+      '@kosmojs/core': 0.7.5
+      '@kosmojs/dev': 0.7.5(@types/node@26.6.10)(jiti@2.7.0)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))
+      '@kosmojs/lib': 0.7.5(svelte@5.59.1)
       jiti: 2.7.0
       package-manager-detector: 1.9.0
       semver: 7.8.6
@@ -2275,7 +2275,7 @@ snapshots:
       - vite-plus
       - vue
 
-  '@kosmojs/core@0.7.4':
+  '@kosmojs/core@0.7.5':
     dependencies:
       cookie: 2.0.2
       light-my-request: 6.8.1
@@ -2283,10 +2283,10 @@ snapshots:
       picoquery: 2.5.0
       string-width: 8.3.0
 
-  '@kosmojs/dev@0.7.4(@types/node@26.6.10)(jiti@2.7.0)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))':
+  '@kosmojs/dev@0.7.5(@types/node@26.6.10)(jiti@2.7.0)(rollup@4.68.8)(solid-js@1.9.20)(svelte@5.59.1)(vue@3.5.46(typescript@7.0.2))':
     dependencies:
-      '@kosmojs/core': 0.7.4
-      '@kosmojs/lib': 0.7.4(svelte@5.59.1)
+      '@kosmojs/core': 0.7.5
+      '@kosmojs/lib': 0.7.5(svelte@5.59.1)
       '@mdx-js/rollup': 3.1.1(rollup@4.68.8)
       '@sveltejs/vite-plugin-svelte': 7.3.2(svelte@5.59.1)(vite@8.3.8(@types/node@26.6.10)(jiti@2.7.0)(yaml@2.9.1))
       '@vitejs/plugin-react': 6.3.0(vite@8.3.8(@types/node@26.6.10)(jiti@2.7.0)(yaml@2.9.1))
@@ -2323,9 +2323,9 @@ snapshots:
       - vite-plus
       - vue
 
-  '@kosmojs/lib@0.7.4(svelte@5.59.1)':
+  '@kosmojs/lib@0.7.5(svelte@5.59.1)':
     dependencies:
-      '@kosmojs/core': 0.7.4
+      '@kosmojs/core': 0.7.5
       '@topcli/spinner': 5.0.0
       crc: 4.3.2
       handlebars: 4.7.10
@@ -2342,10 +2342,10 @@ snapshots:
       - svelte
       - vite-plus
 
-  '@kosmojs/vitest@0.7.4(svelte@5.59.1)':
+  '@kosmojs/vitest@0.7.5(svelte@5.59.1)':
     dependencies:
-      '@kosmojs/core': 0.7.4
-      '@kosmojs/lib': 0.7.4(svelte@5.59.1)
+      '@kosmojs/core': 0.7.5
+      '@kosmojs/lib': 0.7.5(svelte@5.59.1)
       jiti: 2.7.0
       tinyglobby: 0.2.17
     transitivePeerDependencies:
@@ -3743,11 +3743,11 @@ snapshots:
 
   picoquery@2.5.0: {}
 
-  playwright-core@1.63.0: {}
+  playwright-core@1.65.1: {}
 
-  playwright@1.63.0:
+  playwright@1.65.1:
     dependencies:
-      playwright-core: 1.63.0
+      playwright-core: 1.65.1
 
   postcss@8.5.33:
     dependencies:

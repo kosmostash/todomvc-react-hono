@@ -1,6 +1,6 @@
-import type { Todo } from "@/src/app/lib/db";
-import type { TodoId } from "@/src/app/api/todos/types";
-import type { UpdateTodo } from "@/src/app/api/todos/types";
+import type { Todo } from "#/src/app/lib/db";
+import type { TodoId } from "#/src/app/api/todos/types";
+import type { UpdateTodo } from "#/src/app/api/todos/types";
 
 export type ParamsT936095216 = {
   "id": 

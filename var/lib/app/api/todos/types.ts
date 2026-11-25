@@ -1,6 +1,6 @@
-import type { Todo } from "@/src/app/lib/db";
-import type { CreateTodo } from "@/src/app/api/todos/types";
-import type { ToggleAll } from "@/src/app/api/todos/types";
+import type { Todo } from "#/src/app/lib/db";
+import type { CreateTodo } from "#/src/app/api/todos/types";
+import type { ToggleAll } from "#/src/app/api/todos/types";
 
 export type ParamsT3447874133 = {
 };

@@ -1,11 +1,10 @@
-import { type LoaderFunctionArgs, useLoaderData, useParams } from "react-router";
+import { type LoaderFunctionArgs, redirect, useLoaderData, useParams } from "react-router";
 
 import fetchClients from "_/fetch";
 
 import TodoApp from "~/components/todos/TodoApp";
-import { toFilter } from "~/components/todos/filters";
+import { filterPath, toFilter } from "~/components/todos/filters";
 import type { Todo } from "~/components/todos/types";
-import NotFound from "~/pages/404";
 
 const { GET } = fetchClients["todos"];
 
@@ -14,19 +13,18 @@ const { GET } = fetchClients["todos"];
  * so the component stays mounted - and its state intact - while switching filters.
  *
  * The loader runs before render: in-process during SSR, over HTTP on client navigation.
- * Unknown filters (`/nope`) skip the fetch and render the 404 page.
+ * Unknown filters (`/nope`) redirect to `/` - a real 3xx under SSR,
+ * a router navigation in the browser.
  */
 export const loader = ({ params }: LoaderFunctionArgs) => {
-  return toFilter(params.filter) ? GET() : null;
+  if (!toFilter(params.filter)) {
+    throw redirect(filterPath("all"));
+  }
+  return GET();
 };
 
 export default function TodosPage() {
-  const todos = useLoaderData<Array<Todo> | null>();
-  const filter = toFilter(useParams().filter);
-
-  if (!filter || !todos) {
-    return <NotFound />;
-  }
-
+  const todos = useLoaderData<Array<Todo>>();
+  const filter = toFilter(useParams().filter) ?? "all";
   return <TodoApp initialTodos={todos} filter={filter} />;
 }

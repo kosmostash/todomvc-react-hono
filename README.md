@@ -26,6 +26,9 @@ pnpm typecheck
 pnpm test        # API specs (in-process) + browser e2e specs (Playwright, against SSR)
 ```
 
+The e2e specs need a Chromium for Playwright: run `pnpm exec playwright install chromium` once,
+or point `CHROMIUM_PATH` at an existing Chromium executable.
+
 ## Configuration
 
 | Variable | Default | |
@@ -45,7 +48,7 @@ src/app/
 │   ├── index.ts                 GET list · POST create · PATCH toggle all · DELETE clear completed
 │   └── [id]/index.ts            GET · PATCH (title / completed) · DELETE
 ├── pages/{filter}/index.tsx     one page for /, /active, /completed (optional param)
-├── pages/404.tsx                unknown paths, e.g. /nope
+├── pages/404.tsx                paths outside the app, e.g. /active/extra (SSR: 404)
 └── components/todos/            TodoApp, TodoItem, TodoFooter, NewTodo, useTodos
 ```
 
@@ -68,7 +71,7 @@ Requests are validated by KosmoJS from the TypeScript types: ids must be UUIDs, 
 - **SSR**: the page `loader` calls the `todos` fetch client. During SSR it runs in-process with no HTTP hop. The HTML arrives with the list, counter and selected filter already rendered, and works with JavaScript disabled.
 - **Hydration** reuses the loader data, so the client makes no second request.
 - **Optimistic updates**: every change is applied locally right away, then sent to the API through a queue that runs requests one at a time, so the server sees changes in the order they were made. Ids are generated on the client (UUID v4), so new todos render immediately. If a request fails, the list reloads from the server once the queue is empty.
-- **Routing**: a single `{filter}` page serves all three filters. Switching filters is a client-side navigation that keeps the component, and its state, mounted. Filter links are `NavLink`s with paths built from KosmoJS's typed route map. Unknown filters render the 404 page.
+- **Routing**: a single `{filter}` page serves all three filters. Switching filters is a client-side navigation that keeps the component, and its state, mounted. Filter links are `NavLink`s with paths built from KosmoJS's typed route map. An unknown filter (`/nope`) is redirected to `/` by the loader with React Router's `redirect()`: a real `302` under SSR, and a router navigation in the browser.
 
 ## Tests
 

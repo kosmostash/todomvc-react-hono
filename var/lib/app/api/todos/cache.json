@@ -24,23 +24,23 @@
     {
       "importDeclaration": {
         "name": "Todo",
-        "path": "@/src/app/lib/db"
+        "path": "#/src/app/lib/db"
       },
-      "text": "import type { Todo } from \"@/src/app/lib/db\";"
+      "text": "import type { Todo } from \"#/src/app/lib/db\";"
     },
     {
       "importDeclaration": {
         "name": "CreateTodo",
-        "path": "@/src/app/api/todos/types"
+        "path": "#/src/app/api/todos/types"
       },
-      "text": "import type { CreateTodo } from \"@/src/app/api/todos/types\";"
+      "text": "import type { CreateTodo } from \"#/src/app/api/todos/types\";"
     },
     {
       "importDeclaration": {
         "name": "ToggleAll",
-        "path": "@/src/app/api/todos/types"
+        "path": "#/src/app/api/todos/types"
       },
-      "text": "import type { ToggleAll } from \"@/src/app/api/todos/types\";"
+      "text": "import type { ToggleAll } from \"#/src/app/api/todos/types\";"
     }
   ],
   "validationDefinitions": [

@@ -47,23 +47,23 @@
     {
       "importDeclaration": {
         "name": "Todo",
-        "path": "@/src/app/lib/db"
+        "path": "#/src/app/lib/db"
       },
-      "text": "import type { Todo } from \"@/src/app/lib/db\";"
+      "text": "import type { Todo } from \"#/src/app/lib/db\";"
     },
     {
       "importDeclaration": {
         "name": "TodoId",
-        "path": "@/src/app/api/todos/types"
+        "path": "#/src/app/api/todos/types"
       },
-      "text": "import type { TodoId } from \"@/src/app/api/todos/types\";"
+      "text": "import type { TodoId } from \"#/src/app/api/todos/types\";"
     },
     {
       "importDeclaration": {
         "name": "UpdateTodo",
-        "path": "@/src/app/api/todos/types"
+        "path": "#/src/app/api/todos/types"
       },
-      "text": "import type { UpdateTodo } from \"@/src/app/api/todos/types\";"
+      "text": "import type { UpdateTodo } from \"#/src/app/api/todos/types\";"
     }
   ],
   "validationDefinitions": [

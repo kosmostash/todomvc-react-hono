@@ -78,7 +78,9 @@ const reload = async () => {
 };
 
 beforeAll(async () => {
-  browser = await chromium.launch();
+  // CHROMIUM_PATH: use an existing Chromium instead of the one `playwright install` provides
+  const executablePath = process.env.CHROMIUM_PATH;
+  browser = await chromium.launch(executablePath ? { executablePath } : {});
 });
 
 afterAll(async () => {
@@ -407,14 +409,35 @@ describe(route, () => {
       expect(await newTodo().inputValue()).toBe("half typed");
     });
 
-    test("renders the 404 page for unknown filters", async () => {
-      const html = await (await fetch(`${base}/nope`)).text();
-      expect(html).toContain("404");
-      expect(html).not.toContain('class="todoapp"');
+    test("redirects unknown filters to /", async () => {
+      // under SSR the redirect is a real 3xx, not a page that navigates once loaded
+      const response = await fetch(`${base}/nope`, { redirect: "manual" });
+      expect(response.status).toBe(302);
+      expect(response.headers.get("location")).toBe("/");
+      expect(await response.text()).toBe("");
 
       await tab.goto(`${base}/nope`);
-      await expect.poll(() => $(".todoapp").count()).toBe(0);
-      expect(await tab.textContent("body")).toContain("404");
+      await expect.poll(() => new URL(tab.url()).pathname).toBe("/");
+      await expect.poll(titles).toEqual(["one", "two", "three"]);
+    });
+
+    test("redirects unknown filters during client-side navigation", async () => {
+      await tab.evaluate(() => {
+        history.pushState(null, "", "/nope");
+        dispatchEvent(new PopStateEvent("popstate"));
+      });
+      await expect.poll(() => new URL(tab.url()).pathname).toBe("/");
+      await expect.poll(titles).toEqual(["one", "two", "three"]);
+    });
+  });
+
+  describe("Not found", () => {
+    test("renders the 404 page with a 404 status for paths outside the app", async () => {
+      const response = await fetch(`${base}/active/extra`);
+      expect(response.status).toBe(404);
+      const html = await response.text();
+      expect(html).toContain("404 - Not Found");
+      expect(html).not.toContain('class="todoapp"');
     });
   });
 

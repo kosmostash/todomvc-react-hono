@@ -1,0 +1,6 @@
+{
+  "extends": "../../var/lib/app/tsconfig.json",
+  "exclude": [
+    "./public/"
+  ]
+}
